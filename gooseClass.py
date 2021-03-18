@@ -1,5 +1,5 @@
 class Mongoose:
-    def __init__(self, name, hp):
+    def __init__(self, name, health):
         self.name = name
         self.health = health
 
@@ -11,15 +11,18 @@ class Mongoose:
 
     def berry(self):
       self.health += 40
+    
+    def view_stats(self):
+      print(f"{self.name} has {self.health} health.")
 
-character1 = Mongoose("Goose", 75)
-character2 = Mongoose("Thon", 130)
+# character1 = Mongoose("Goose", 75)
+# character2 = Mongoose("Thon", 130)
 
-def pythonAttack(goose, thon):
-  goose.damage()
-  print(f"{character2.name} chokes {character1.name} his health is at {character1.hp} now")
+def pythonAttack(char1, char2):
+  char1.damage()
+  print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
 
-pythonAttack(character1, character2)
+# pythonAttack(character1, character2)
 
 # print("George uses bite on Goose")
 # goose.damage()

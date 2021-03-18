@@ -40,32 +40,32 @@ def eat_berries():
     print(f"{char1.name} has {char1.health} remaining.")
 
 
-def main_menu():
-    message = """
-    Welcome to Mongoose Versus Python!
+# def main_menu():
+#     message = """
+#     Welcome to Mongoose Versus Python!
     
-    You're just a laid back mongoose vibing in the wilderness...
-    When suddenly, from the shadows of the marshland, a python springs its trap!
+#     You're just a laid back mongoose vibing in the wilderness...
+#     When suddenly, from the shadows of the marshland, a python springs its trap!
     
-    Press 1 to Play Dead then Attack (damage equals 20)
-    Press 2 to Do Claw Swipe (damage equals 10)
-    Press 3 to Eat Berries (boost health by 25)
-    Press q to End Game
-"""
-    print(message)
-    option = input("Select an option: ")
-    while option != "q":
-        if option == "1":
-            mongoose_play_dead(char1, char2)
-            main_menu()
-        elif option == "2":
-            mongoose_claw_attack(char1, char2)
-            main_menu()
-        elif option == "3":
-            eat_berries()
-            main_menu()
-        elif option == "q":
-            sys_quit()
+#     Press 1 to Play Dead then Attack (damage equals 20)
+#     Press 2 to Do Claw Swipe (damage equals 10)
+#     Press 3 to Eat Berries (boost health by 25)
+#     Press q to End Game
+# """
+    # print(message)
+    # option = input("Select an option: ")
+    # while option != "q":
+    #     if option == "1":
+    #         mongoose_play_dead(char1, char2)
+    #         main_menu()
+    #     elif option == "2":
+    #         mongoose_claw_attack(char1, char2)
+    #         main_menu()
+    #     elif option == "3":
+    #         eat_berries()
+    #         main_menu()
+    #     elif option == "q":
+    #         sys_quit()
 
 
 

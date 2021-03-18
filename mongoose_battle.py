@@ -44,6 +44,6 @@ def main_menu():
             main_menu()
 
 
-
 print("You are a Mongoose. A wild Python has appeared!")
 main_menu()
+

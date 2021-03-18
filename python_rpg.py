@@ -4,12 +4,11 @@
 
 
 def victory_message():
-    if char2.health == 0:
-    print("The Mongoose has slain the Python!!!")
+    if joe.health == 0:
+        print("The Mongoose has slain the Python!!!")
 
 def defeat_message():
-    if char1.health == 0:
-    print ("The Python defeats the Mongoose...")
+    if ricky.health == 0:
+        print ("The Python defeats the Mongoose...")
 
-def view_stats():
-    print(f"The {goose.name} has {goose.attack} and {goose.hp} health.")
+

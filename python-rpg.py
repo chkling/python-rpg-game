@@ -13,6 +13,11 @@ def main_menu():
     """
     return print(message)
 
+def victory_message()
+    print("Victory!!! The pain hahah")
+
+def defeat_message()
+
 option = ""
 while option != 5:
     main_menu()
@@ -26,4 +31,3 @@ while option != 5:
         pass
     if option == 5:
         pass
-main_menu()

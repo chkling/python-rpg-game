@@ -13,17 +13,31 @@ def main_menu():
     """
     return print(message)
 
+
+
+
+
+
+
+
+
+
+
+
+
 option = ""
-while option != 5:
+while option != "5":
     main_menu()
-    if option == 1:
+    if option == "1":
         pass
-    if option == 2:
+    elif option == "2":
         pass
-    if option == 3:
+    elif option == "3":
         pass
-    if option == 4:
+    elif option == "4":
         pass
-    if option == 5:
+    elif option == "5":
         pass
+    else:
+        print("Please input a valid option.")
 main_menu()

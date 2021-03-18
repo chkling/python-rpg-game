@@ -13,6 +13,7 @@ def main_menu():
     """
     return print(message)
 
+
 def victory_message():
     print("The Mongoose has slain the Python!!!")
 
@@ -21,17 +22,3 @@ def defeat_message():
 
 def view_stats():
     print(f"The {goose.name} has {goose.attack} and {goose.health} health.")
-
-option = ""
-while option != 5:
-    main_menu()
-    if option == 1:
-        pass
-    if option == 2:
-        pass
-    if option == 3:
-        pass
-    if option == 4:
-        pass
-    if option == 5:
-        pass

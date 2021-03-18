@@ -3,7 +3,6 @@
 
 def main_menu():
     message = """
-    A wild Python has appeared!\n
     What would you like to do?\n\n
     1. Bite the Python
     2. Play dead...
@@ -14,11 +13,14 @@ def main_menu():
     """
     return print(message)
 
-def victory_message()
+def victory_message():
     print("The Mongoose has slain the Python!!!")
 
-def defeat_message()
+def defeat_message():
     print ("The Python defeats the Mongoose...")
+
+def view_stats():
+    print(f"The {mongoose.name} has {moongoose.attack} and {mongoose.health} health.")
 
 option = ""
 while option != 5:

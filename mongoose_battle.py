@@ -7,23 +7,23 @@ def battleOptions():
     A wild Python has appeared!
     What would you like to do?
     """)
-    while option != "q":
-        # main_menu()
-        if option == 1:
-            mongoose_bite_attack()            
 
-        elif option == 2:
-            #play dead attack
-
-        elif option == 3:
-            pass
+option = ""
+while option != "q":
+    main_menu()
+     # main_menu()
+    if option == 1:
+        mongoose_bite_attack()            
+    elif option == 2:
+        mongoose_claw_attack()
+         #play dead attack
+    elif option == 3:
+         pass
     # call function to eat berry for health
-        elif option == 4:   
-            pass         
+    elif option == 4:   
+        view_stats()        
     # view stats function
-        elif option == 5:
-            run_away()
-        else:
-            return print("Please input a valid option.")
-
-battleOptions()
+    elif option == 5:
+        run_away()
+    else:
+        return print("Please input a valid option.")

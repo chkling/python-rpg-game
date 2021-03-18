@@ -10,6 +10,7 @@ def main_menu():
     3. Eat a berry
     3. View Mongoose stats
     4. Run away\n
+    ********************
     """
     return print(message)
 

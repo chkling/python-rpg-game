@@ -31,5 +31,5 @@ def mongoose_claw_attack(char1, char2):
     print(f"{char2.name} takes 20 damage.")
     print(f"{char2.name} has {char2.health} health points left.")
 
-while option != "q":
-    if option == "1":
+# while option != "q":
+#     if option == "1":

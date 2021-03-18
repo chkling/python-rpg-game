@@ -20,7 +20,7 @@ def defeat_message():
     print ("The Python defeats the Mongoose...")
 
 def view_stats():
-    print(f"The {mongoose.name} has {moongoose.attack} and {mongoose.health} health.")
+    print(f"The {goose.name} has {goose.attack} and {goose.health} health.")
 
 option = ""
 while option != 5:

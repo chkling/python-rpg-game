@@ -29,11 +29,14 @@ option = ""
 while option != "5":
     main_menu()
     if option == "1":
-        pass
+        print("You bite the python for x damage.")
+        print("The python bites you for x damage.")
     elif option == "2":
-        pass
+        print("You play dead...")
+        print("The python approaches to inspect you.")
+        print("You surprise attack with your bite and claws for x damage!")
     elif option == "3":
-        pass
+        print("You eat a berry and regain x HP!")
     elif option == "4":
         pass
     elif option == "5":

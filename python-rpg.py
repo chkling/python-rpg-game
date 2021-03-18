@@ -13,21 +13,34 @@ def main_menu():
     """
     return print(message)
 
-def victory_message()
-    print("Victory!!! The pain hahah")
 
-def defeat_message()
+
+
+
+
+
+
+
+
+
+
 
 option = ""
-while option != 5:
+while option != "5":
     main_menu()
-    if option == 1:
+    if option == "1":
+        print("You bite the python for x damage.")
+        print("The python bites you for x damage.")
+    elif option == "2":
+        print("You play dead...")
+        print("The python approaches to inspect you.")
+        print("You surprise attack with your bite and claws for x damage!")
+    elif option == "3":
+        print("You eat a berry and regain x HP!")
+    elif option == "4":
         pass
-    if option == 2:
+    elif option == "5":
         pass
-    if option == 3:
-        pass
-    if option == 4:
-        pass
-    if option == 5:
-        pass
+    else:
+        print("Please input a valid option.")
+main_menu()

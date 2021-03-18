@@ -1,16 +1,16 @@
 class Mongoose:
     def __init__(self, name, hp):
         self.name = name
-        self.hp = hp
+        self.health = health
 
     # def damage(self):
     #   self.hp -= 15
 
     def damage(self):
-      self.hp -= 25
+      self.health -= 25
 
     def berry(self):
-      self.hp += 40
+      self.health += 40
 
 character1 = Mongoose("Goose", 75)
 character2 = Mongoose("Thon", 130)

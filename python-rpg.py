@@ -14,9 +14,10 @@ def main_menu():
     return print(message)
 
 def victory_message()
-    print("Victory!!! The pain hahah")
+    print("The Mongoose has slain the Python!!!")
 
 def defeat_message()
+    print ("The Python defeats the Mongoose...")
 
 option = ""
 while option != 5:

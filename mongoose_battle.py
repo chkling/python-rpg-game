@@ -4,7 +4,7 @@
 
 from gooseClass import pythonAttack, Mongoose
 from jwalden2019 import Python, mongoose_play_dead, mongoose_claw_attack, eat_berries
-from python_rpg import victory_message, defeat_message, view_stats
+from python_rpg import victory_message, defeat_message
 
 
 ricky = Mongoose("Crazy Ricky", 150)
@@ -14,13 +14,22 @@ def run_away():
     print("You run away!")
     exit()
 
+def fight_result ():
+    if ricky.health <= 0:
+        print("The Mongoose has been defeated...")
+        exit()
+    elif joe.health <= 0:
+        print("The Python has been killed!!!")
+        exit()
+
 def main_menu():
+    fight_result()
     message = int(input("""
     What would you like to do?\n\n
-    1. Bite the Python
+    1. Claw at the Python
     2. Play dead...
     3. Eat a berry
-    4. View Mongoose stats
+    4. View Mongoose' health
     5. Run away\n
     ********************
     """))
@@ -44,8 +53,27 @@ def main_menu():
             return print("Please input a valid option.")
             main_menu()
 
-# victory_message()
-# defeat_message()
+
+welcome_image = print("""
+           /^\/^\\
+         _|__|  O|
+\/     /~     \_/ \\
+ \____|__________/  \\
+        \_______      \\
+                `\     \                 \\
+                  |     |                  \\
+                 /      /                    \\
+                /     /                       \\
+              /      /                         \ \\
+             /     /                            \  \\
+           /     /             _----_            \   \\
+          /     /           _-~      ~-_         |   |
+         (      (        _-~    _--_    ~-_     _/   |
+          \      ~-____-~    _-~    ~-_    ~-_-~    /
+            ~-_           _-~          ~-_       _-~
+               ~--______-~                ~-___-~
+""")
 print("You are a Mongoose. A wild Python has appeared!")
+
 main_menu()
 

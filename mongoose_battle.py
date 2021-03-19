@@ -1,13 +1,13 @@
-
-
 from animal_classes import Mongoose, Python
+
 
 mongoose = Mongoose("Manny Mongoose", 200)
 python = Python("Peter Python", 300)
-berry_amount = 3
+
 
 def fight_result ():
     if mongoose.health <= 0:
+
 
         print("""
                  

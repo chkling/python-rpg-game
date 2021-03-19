@@ -2,25 +2,12 @@
 
 from animal_classes import Mongoose, Python
 
-# from gooseClass import pythonAttack, Mongoose
-# from jwalden2019 import Python, mongoose_play_dead, mongoose_claw_attack, eat_berries
-# from python_rpg import victory_message, defeat_message
-
-
-
-mongoose = Mongoose("Mongoose", 150)
-python = Python("Python", 150)
+mongoose = Mongoose("Manny Mongoose", 200)
+python = Python("Peter Python", 300)
 berry_amount = 3
 
 def fight_result ():
     if mongoose.health <= 0:
-        print("The Mongoose has been defeated...")
-        exit()
-    elif python.health <= 0:
-        print("The Python has been killed!!!")
-
-def fight_result ():
-    if ricky.health <= 0:
 
         print("""
                  
@@ -36,7 +23,7 @@ def fight_result ():
                             `.___,'   `.__,'   `.__,'  \n
         The Mongoose dies in battle!""")
         exit()
-    elif joe.health <= 0:
+    elif python.health <= 0:
         print("""
                                                          _...---.._
                                                      _.'`       -_  `.
@@ -72,9 +59,9 @@ def main_menu():
     fight_result()
     message = int(input("""
     What would you like to do?\n\n
-    1. You swipe your claw across python's body. 
-    2. Pretend to die then surprise attack. 
-    3. Eat berries. (boost health)
+    1. Claw attack
+    2. Play dead 
+    3. Eat a berry
     4. View Mongoose's health
     5. Run away\n
     ********************
@@ -98,6 +85,7 @@ def main_menu():
             main_menu()
         elif message == 5:
             mongoose.run_away()
+            main_menu()
         else:
             return print("Please input a valid option.")
             main_menu()

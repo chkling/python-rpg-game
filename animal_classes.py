@@ -14,8 +14,9 @@ class Python:
     #     self.health -= 15
     
     def pythonAttack(self, char1, char2):
-        char1.damage(40)
-        print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
+
+        char1.damage()
+        print(f"{char2.name} squeezes {char1.name}, his health diminishes to {char1.health}.")
 
 class Mongoose:
     def __init__(self, name, health):
@@ -32,13 +33,13 @@ class Mongoose:
         print(f"{self.name} has {self.health} remaining.")
     
     def mongoose_play_dead(self, char1, char2):
-        print(f"{char1.name} attacks {char2.name}")
+        print(f"{char1.name} lulls {char2.name} into thinking it's dead then attacks.")
         char2.take_damage_play_dead()
         print(f"{char2.name} takes 50 damage.")
         print(f"{char2.name} has {char2.health} health points left.")
 
     def mongoose_claw_attack(self, char1, char2):
-        print(f"{char1.name} attacks {char2.name}")
+        print(f"{char1.name} swipes at python with it's claw {char2.name}")
         char2.take_damage_claw()
         print(f"{char2.name} takes 20 damage.")
         print(f"{char2.name} has {char2.health} remaining.")

@@ -3,8 +3,8 @@ class Mongoose:
         self.name = name
         self.health = health
 
-    # def damage(self):
-    #   self.hp -= 15
+    def damage(self):
+      self.hp -= 15
 
     def damage(self):
       self.health -= 25

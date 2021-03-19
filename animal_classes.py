@@ -5,25 +5,26 @@ class Python:
         self.health = health
 
     def take_damage_play_dead(self):
-        self.health -= 20
+        self.health -= 50
 
     def take_damage_claw(self):
-        self.health -= 10
+        self.health -= 20
 
     # def damage(self):
     #     self.health -= 15
 
     def pythonAttack(self, char1, char2):
+
         char1.damage()
-        print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
+        print(f"{char2.name} squeezes {char1.name}, his health diminishes to {char1.health}.")
 
 class Mongoose:
     def __init__(self, name, health):
         self.name = name
         self.health = health
 
-    def damage(self):
-        self.health -= 15
+    def damage(self, damage):
+        self.health -= damage
 
     
     def eat_berries(self):
@@ -37,15 +38,15 @@ class Mongoose:
             return print(f"{self.name} is too full to eat berries!")
     
     def mongoose_play_dead(self, char1, char2):
-        print(f"{char1.name} attacks {char2.name}")
+        print(f"{char1.name} lulls {char2.name} into thinking it's dead then attacks.")
         char2.take_damage_play_dead()
-        print(f"{char2.name} takes 20 damage.")
+        print(f"{char2.name} takes 50 damage.")
         print(f"{char2.name} has {char2.health} health points left.")
 
     def mongoose_claw_attack(self, char1, char2):
-        print(f"{char1.name} attacks {char2.name}")
+        print(f"{char1.name} swipes at python with it's claw {char2.name}")
         char2.take_damage_claw()
-        print(f"{char2.name} takes 10 damage.")
+        print(f"{char2.name} takes 20 damage.")
         print(f"{char2.name} has {char2.health} remaining.")
 
     def view_stats(self):

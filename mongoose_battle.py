@@ -7,14 +7,15 @@ from animal_classes import Mongoose, Python
 # from python_rpg import victory_message, defeat_message
 
 
-ricky = Mongoose("Crazy Ricky", 150)
-joe = Python("Dirty Joe", 150)
+mongoose = Mongoose("Mongoose", 150)
+python = Python("Python", 150)
+berry_amount = 3
 
 def fight_result ():
-    if ricky.health <= 0:
+    if mongoose.health <= 0:
         print("The Mongoose has been defeated...")
         exit()
-    elif joe.health <= 0:
+    elif python.health <= 0:
         print("The Python has been killed!!!")
         exit()
 
@@ -29,22 +30,22 @@ def main_menu():
     5. Run away\n
     ********************
     """))
-    while message != "q":        
+    while message != "q":   
         if message == 1:
-            ricky.mongoose_claw_attack(ricky, joe)  
-            joe.pythonAttack(ricky, joe)         
+            mongoose.mongoose_claw_attack(mongoose, python)  
+            python.pythonAttack(mongoose, python)         
             main_menu()
         elif message == 2:
-            ricky.mongoose_play_dead(ricky, joe) 
+            mongoose.mongoose_play_dead(mongoose, python) 
             main_menu()
         elif message == 3:
-            ricky.eat_berries()
+            mongoose.eat_berries()
             main_menu()
         elif message == 4:   
-            ricky.view_stats()
+            mongoose.view_stats()
             main_menu()
         elif message == 5:
-            ricky.run_away()
+            mongoose.run_away()
         else:
             return print("Please input a valid option.")
             main_menu()

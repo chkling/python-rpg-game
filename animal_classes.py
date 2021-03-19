@@ -12,7 +12,7 @@ class Python:
 
     # def damage(self):
     #     self.health -= 15
-    
+
     def pythonAttack(self, char1, char2):
         char1.damage()
         print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
@@ -25,11 +25,16 @@ class Mongoose:
     def damage(self):
         self.health -= 15
 
+    
     def eat_berries(self):
-        print(f"{self.name} eats a handful of berries")
-        self.health += 25
-        print(f"{self.name} gains 25 health.")
-        print(f"{self.name} has {self.health} remaining.")
+        while self.health < 100:
+            print(f"{self.name} eats a plump berry.")
+            self.health += 60
+            print(f"{self.name} gains 60 health.")
+            print(f"{self.name} has {self.health} remaining.")
+            return
+        else:
+            return print(f"{self.name} is too full to eat berries!")
     
     def mongoose_play_dead(self, char1, char2):
         print(f"{char1.name} attacks {char2.name}")

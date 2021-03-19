@@ -7,15 +7,54 @@ from animal_classes import Mongoose, Python
 # from python_rpg import victory_message, defeat_message
 
 
-ricky = Mongoose("Crazy Ricky", 150)
-joe = Python("Dirty Joe", 150)
+ricky = Mongoose("Crazy Ricky", 200)
+joe = Python("Dirty Joe", 300)
 
 def fight_result ():
     if ricky.health <= 0:
-        print("The Mongoose has been defeated...")
+        print("""
+                 
+                                                  
+                         (,,(,                   
+                      (,'     `/                           
+                  ,  ,'  ,--.  `,                           
+                   `{R, {    \  :                                       
+                     C,,'    /  /                                        
+                     |;;    /  ,' ,--.    ,---.      ,                    
+                     \;'   /  ,' /  _  \  /  _  \   ,'/                    
+                           \   `'  / \  `'  / \  `.' /                     
+                            `.___,'   `.__,'   `.__,'  \n
+        The Mongoose has been defeated...""")
         exit()
     elif joe.health <= 0:
-        print("The Python has been killed!!!")
+        print("""
+                                                         _...---.._
+                                                     _.'`       -_  `.
+                                                 .-'`                  \\
+                                              .-`                     O
+                                           _-`                       __  \\
+                                       .-'`                  . ' .   \ `;/
+                                   _.-`                    /       `._`/
+                           _...--'`                        \_
+                        .'`                         -         `'--.._
+                     . `                           \                  `-.
+                    .                `              `-..__. ... - -.._`-
+                   '.                `  '''---- -''`                  `-.`.
+                 .` -                '`.  `-.
+              .-` .` '             .`'.__ ;
+          _.-` .-`   '            .
+      _.-`  .-`       '         .`
+(`''-'' _.-`          '        .'
+ `'---''            .`       .`
+                 .'     . '`
+                .    .-`
+              .`   ,`
+             '   .'
+           '   .`
+          '  .`
+          `  '.    
+          `.___;\n
+        The Python has been killed!!!""")
         exit()
 
 def main_menu():
@@ -32,7 +71,7 @@ def main_menu():
     while message != "q":        
         if message == 1:
             ricky.mongoose_claw_attack(ricky, joe)  
-            joe.pythonAttack(ricky, joe)         
+            joe.pythonAttack(ricky, joe,)         
             main_menu()
         elif message == 2:
             ricky.mongoose_play_dead(ricky, joe) 
@@ -41,6 +80,9 @@ def main_menu():
             ricky.eat_berries()
             main_menu()
         elif message == 4:   
+            ricky.view_stats()
+            print(f"The Python launches a surprise attack dealing 100 damage!!!")
+            ricky.damage(100)
             ricky.view_stats()
             main_menu()
         elif message == 5:

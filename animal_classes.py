@@ -5,16 +5,16 @@ class Python:
         self.health = health
 
     def take_damage_play_dead(self):
-        self.health -= 20
+        self.health -= 50
 
     def take_damage_claw(self):
-        self.health -= 10
+        self.health -= 20
 
     # def damage(self):
     #     self.health -= 15
     
     def pythonAttack(self, char1, char2):
-        char1.damage()
+        char1.damage(40)
         print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
 
 class Mongoose:
@@ -22,8 +22,8 @@ class Mongoose:
         self.name = name
         self.health = health
 
-    def damage(self):
-        self.health -= 15
+    def damage(self, damage):
+        self.health -= damage
 
     def eat_berries(self):
         print(f"{self.name} eats a handful of berries")
@@ -34,13 +34,13 @@ class Mongoose:
     def mongoose_play_dead(self, char1, char2):
         print(f"{char1.name} attacks {char2.name}")
         char2.take_damage_play_dead()
-        print(f"{char2.name} takes 20 damage.")
+        print(f"{char2.name} takes 50 damage.")
         print(f"{char2.name} has {char2.health} health points left.")
 
     def mongoose_claw_attack(self, char1, char2):
         print(f"{char1.name} attacks {char2.name}")
         char2.take_damage_claw()
-        print(f"{char2.name} takes 10 damage.")
+        print(f"{char2.name} takes 20 damage.")
         print(f"{char2.name} has {char2.health} remaining.")
 
     def view_stats(self):

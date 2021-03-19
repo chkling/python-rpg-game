@@ -14,8 +14,7 @@ class Python:
     #     self.health -= 15
 
     def pythonAttack(self, char1, char2):
-
-        char1.damage()
+        char1.damage(40)
         print(f"{char2.name} squeezes {char1.name}, his health diminishes to {char1.health}.")
 
 class Mongoose:

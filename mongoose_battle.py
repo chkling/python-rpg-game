@@ -1,15 +1,7 @@
-
-
 from animal_classes import Mongoose, Python
 
-# from gooseClass import pythonAttack, Mongoose
-# from jwalden2019 import Python, mongoose_play_dead, mongoose_claw_attack, eat_berries
-# from python_rpg import victory_message, defeat_message
-
-
-
-mongoose = Mongoose("Mongoose", 150)
-python = Python("Python", 150)
+mongoose = Mongoose("Mongoose", 200)
+python = Python("Python", 300)
 berry_amount = 3
 
 def fight_result ():
@@ -20,7 +12,7 @@ def fight_result ():
         print("The Python has been killed!!!")
 
 def fight_result ():
-    if ricky.health <= 0:
+    if mongoose.health <= 0:
 
         print("""
                  
@@ -36,7 +28,7 @@ def fight_result ():
                             `.___,'   `.__,'   `.__,'  \n
         The Mongoose dies in battle!""")
         exit()
-    elif joe.health <= 0:
+    elif python.health <= 0:
         print("""
                                                          _...---.._
                                                      _.'`       -_  `.

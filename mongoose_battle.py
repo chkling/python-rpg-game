@@ -12,20 +12,20 @@ joe = Python("Dirty Joe", 150)
 
 def fight_result ():
     if ricky.health <= 0:
-        print("The Mongoose has been defeated...")
+        print("The Mongoose dies in battle!")
         exit()
     elif joe.health <= 0:
-        print("The Python has been killed!!!")
+        print("The Python perishes in battle!")
         exit()
 
 def main_menu():
     fight_result()
     message = int(input("""
     What would you like to do?\n\n
-    1. Claw at the Python
-    2. Play dead...
-    3. Eat a berry
-    4. View Mongoose' health
+    1. You swipe your claw across python's body. 
+    2. Pretend to die then surprise attack. 
+    3. Eat berries. (boost health)
+    4. View Mongoose's health
     5. Run away\n
     ********************
     """))
@@ -69,7 +69,7 @@ welcome_image = print("""
             ~-_           _-~          ~-_       _-~
                ~--______-~                ~-___-~
 """)
-print("You are a Mongoose. A wild Python has appeared!")
+print("You are a mongoose, just vibin in the wilderness, when suddenly a python appears!")
 
 main_menu()
 

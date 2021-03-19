@@ -10,12 +10,32 @@ class Python:
 
 class Mongoose:
     def __init__(self, name, health):
-        self.name = name   
+        self.name = name
         self.health = health
-    def take_damage_python_bite(self):
-        self.health -= 20
-    def eat_berries(self):
-        self.health += 25
+
+    def damage(self):
+      self.health -= 25
+
+    def eat_berries():
+        print(f"{char1.name} eats a handful of berries")
+        char1.eat_berries()
+        print(f"{char1.name} gains 25 health.")
+        print(f"{char1.name} has {char1.health} remaining.")
+
+    # def berry(self):
+    #   self.health += 40
+    
+    def view_stats(self):
+      print(f"{self.name} has {self.health} health.")
+
+# class Mongoose:
+#     def __init__(self, name, health):
+#         self.name = name   
+#         self.health = health
+#     def take_damage_python_bite(self):
+#         self.health -= 20
+#     def eat_berries(self):
+#         self.health += 25
 
 char1 = Mongoose("Crazy Ricky", 150)
 char2 = Python("Big Johnson", 150)
@@ -33,11 +53,15 @@ def mongoose_claw_attack(char1, char2):
     print(f"{char2.name} takes 10 damage.")
     print(f"{char2.name} has {char2.health} remaining.")
 
-def eat_berries():
-    print(f"{char1.name} eats a handful of berries")
-    char1.eat_berries()
-    print(f"{char1.name} gains 25 health.")
-    print(f"{char1.name} has {char1.health} remaining.")
+def pythonAttack(char1, char2):
+  char1.damage()
+  print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
+
+# def eat_berries():
+#     print(f"{char1.name} eats a handful of berries")
+#     char1.eat_berries()
+#     print(f"{char1.name} gains 25 health.")
+#     print(f"{char1.name} has {char1.health} remaining.")
 
 
 # def main_menu():

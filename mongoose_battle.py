@@ -1,18 +1,13 @@
 from animal_classes import Mongoose, Python
 
-mongoose = Mongoose("Mongoose", 200)
-python = Python("Python", 300)
-berry_amount = 3
+
+mongoose = Mongoose("Manny Mongoose", 200)
+python = Python("Peter Python", 300)
+
 
 def fight_result ():
     if mongoose.health <= 0:
-        print("The Mongoose has been defeated...")
-        exit()
-    elif python.health <= 0:
-        print("The Python has been killed!!!")
 
-def fight_result ():
-    if mongoose.health <= 0:
 
         print("""
                  
@@ -64,9 +59,9 @@ def main_menu():
     fight_result()
     message = int(input("""
     What would you like to do?\n\n
-    1. You swipe your claw across python's body. 
-    2. Pretend to die then surprise attack. 
-    3. Eat berries. (boost health)
+    1. Claw attack
+    2. Play dead 
+    3. Eat a berry
     4. View Mongoose's health
     5. Run away\n
     ********************
@@ -90,6 +85,7 @@ def main_menu():
             main_menu()
         elif message == 5:
             mongoose.run_away()
+            main_menu()
         else:
             return print("Please input a valid option.")
             main_menu()

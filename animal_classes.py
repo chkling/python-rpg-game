@@ -10,9 +10,9 @@ class Python:
     def take_damage_claw(self):
         self.health -= 10
 
-    # def damage(self):
-    #     self.health -= 15
-    
+    def rage(self):
+        self.health += 200
+
     def pythonAttack(self, char1, char2):
         char1.damage()
         print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
@@ -30,7 +30,7 @@ class Mongoose:
         self.health += 25
         print(f"{self.name} gains 25 health.")
         print(f"{self.name} has {self.health} remaining.")
-    
+
     def mongoose_play_dead(self, char1, char2):
         print(f"{char1.name} attacks {char2.name}")
         char2.take_damage_play_dead()
@@ -47,12 +47,14 @@ class Mongoose:
         print(f"{self.name} has {self.health} health.")
 
     def run_away(self):
-        print(f"{self.name} runs away!")
-        exit()
+        joe.rage()
+        print(f"You try to escape and anger the python his health is now at {char2.health}")
+        # print(f"{self.name} runs away!")
+        main_menu()
 
 # class Mongoose:
 #     def __init__(self, name, health):
-#         self.name = name   
+#         self.name = name
 #         self.health = health
 #     def take_damage_python_bite(self):
 #         self.health -= 20
@@ -79,10 +81,10 @@ class Mongoose:
 # def main_menu():
 #     message = """
 #     Welcome to Mongoose Versus Python!
-    
+
 #     You're just a laid back mongoose vibing in the wilderness...
 #     When suddenly, from the shadows of the marshland, a python springs its trap!
-    
+
 #     Press 1 to Play Dead then Attack (damage equals 20)
 #     Press 2 to Do Claw Swipe (damage equals 10)
 #     Press 3 to Eat Berries (boost health by 25)
@@ -102,6 +104,3 @@ class Mongoose:
     #         main_menu()
     #     elif option == "q":
     #         sys_quit()
-
-
-

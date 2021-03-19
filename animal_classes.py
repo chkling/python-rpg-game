@@ -3,10 +3,19 @@ class Python:
     def __init__(self, name, health):
         self.name = name
         self.health = health
+
     def take_damage_play_dead(self):
         self.health -= 20
+
     def take_damage_claw(self):
         self.health -= 10
+
+    # def damage(self):
+    #     self.health -= 15
+    
+    def pythonAttack(self, char1, char2):
+        char1.damage()
+        print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
 
 class Mongoose:
     def __init__(self, name, health):
@@ -14,19 +23,32 @@ class Mongoose:
         self.health = health
 
     def damage(self):
-      self.health -= 25
+        self.health -= 15
 
-    def eat_berries():
-        print(f"{char1.name} eats a handful of berries")
-        char1.eat_berries()
-        print(f"{char1.name} gains 25 health.")
-        print(f"{char1.name} has {char1.health} remaining.")
-
-    # def berry(self):
-    #   self.health += 40
+    def eat_berries(self):
+        print(f"{self.name} eats a handful of berries")
+        self.health += 25
+        print(f"{self.name} gains 25 health.")
+        print(f"{self.name} has {self.health} remaining.")
     
+    def mongoose_play_dead(self, char1, char2):
+        print(f"{char1.name} attacks {char2.name}")
+        char2.take_damage_play_dead()
+        print(f"{char2.name} takes 20 damage.")
+        print(f"{char2.name} has {char2.health} health points left.")
+
+    def mongoose_claw_attack(self, char1, char2):
+        print(f"{char1.name} attacks {char2.name}")
+        char2.take_damage_claw()
+        print(f"{char2.name} takes 10 damage.")
+        print(f"{char2.name} has {char2.health} remaining.")
+
     def view_stats(self):
-      print(f"{self.name} has {self.health} health.")
+        print(f"{self.name} has {self.health} health.")
+
+    def run_away(self):
+        print(f"{self.name} runs away!")
+        exit()
 
 # class Mongoose:
 #     def __init__(self, name, health):
@@ -37,25 +59,15 @@ class Mongoose:
 #     def eat_berries(self):
 #         self.health += 25
 
-char1 = Mongoose("Crazy Ricky", 150)
-char2 = Python("Big Johnson", 150)
+# char1 = Mongoose("Crazy Ricky", 150)
+# char2 = Python("Big Johnson", 150)
 
 ## CHARACTER FUNCTIONS ##
-def mongoose_play_dead(char1, char2):
-    print(f"{char1.name} attacks {char2.name}")
-    char2.take_damage_play_dead()
-    print(f"{char2.name} takes 20 damage.")
-    print(f"{char2.name} has {char2.health} health points left.")
 
-def mongoose_claw_attack(char1, char2):
-    print(f"{char1.name} attacks {char2.name}")
-    char2.take_damage_claw()
-    print(f"{char2.name} takes 10 damage.")
-    print(f"{char2.name} has {char2.health} remaining.")
 
-def pythonAttack(char1, char2):
-  char1.damage()
-  print(f"{char2.name} chokes {char1.name} his health is at {char1.health} now")
+
+
+
 
 # def eat_berries():
 #     print(f"{char1.name} eats a handful of berries")

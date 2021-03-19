@@ -7,8 +7,6 @@ python = Python("Peter Python", 300)
 
 def fight_result ():
     if mongoose.health <= 0:
-
-
         print("""
                  
                                                   
@@ -21,7 +19,7 @@ def fight_result ():
                      \;'   /  ,' /  _  \  /  _  \   ,'/                    
                            \   `'  / \  `'  / \  `.' /                     
                             `.___,'   `.__,'   `.__,'  \n
-        The Mongoose dies in battle!""")
+        Manny the mongoose dies in battle!""")
         exit()
     elif python.health <= 0:
         print("""
@@ -51,8 +49,7 @@ def fight_result ():
           '  .`
           `  '.    
           `.___;\n
-        The Python perishes in battle!!!""")
-
+        Peter the Python perishes in battle!!!""")
         exit()
 
 def main_menu():
@@ -62,7 +59,7 @@ def main_menu():
     1. Claw attack
     2. Play dead 
     3. Eat a berry
-    4. View Mongoose's health
+    4. View health
     5. Run away\n
     ********************
     """))
@@ -78,8 +75,7 @@ def main_menu():
             mongoose.eat_berries()
             main_menu()
         elif message == 4:   
-            mongoose.view_stats()
-            print(f"The Python launches a surprise attack dealing 100 damage!!!")
+            print(f"While you were checking on yourself, Peter the python launches a surprise attack dealing 100 damage!!!")
             mongoose.damage(100)
             mongoose.view_stats()
             main_menu()
@@ -110,7 +106,7 @@ welcome_image = print("""
             ~-_           _-~          ~-_       _-~
                ~--______-~                ~-___-~
 """)
-print("You are a mongoose, just vibin in the wilderness, when suddenly a python appears!")
+print("You are Manny the mongoose, just vibin in the wilderness.. when suddenly Peter the python appears!")
 
 main_menu()
 
